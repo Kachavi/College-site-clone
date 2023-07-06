@@ -6,7 +6,7 @@ import './index.css'
 function Header() {
     return (
         <div>
-            <img src="src/assets/banner.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"></img>
+            <img src="/banner.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"></img>
             <nav class="navbar navbar-expand-lg bg-new" data-bs-theme="dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,16 +23,16 @@ function Header() {
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <Link to={`about`} class="dropdown-item">About TCSC</Link>
+                                        <Link to={`/about/tcsc`} class="dropdown-item">About TCSC</Link>
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Our Vision and Mission</a></li>
+                                    <li><Link to={`/about/mission`} class="dropdown-item">Our Vision and Mission</Link></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Aluminai</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <Link class="nav-link" to={`/contact`}>Contact</Link>
                             </li>
                         </ul>
                     </div>
