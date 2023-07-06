@@ -1,4 +1,6 @@
+import Footer from "./Footer"
 import Header from "./Header"
+
 
 function Mission() {
     return (
@@ -61,6 +63,7 @@ function Mission() {
 
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

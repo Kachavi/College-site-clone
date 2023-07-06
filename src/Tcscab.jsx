@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Header from "./Header"
 
 function Tcscab() {
@@ -98,7 +99,7 @@ function Tcscab() {
                 </div>
 
             </div>
-
+            <Footer></Footer>
         </>
     )
 }

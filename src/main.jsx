@@ -9,6 +9,7 @@ import About from './About.jsx';
 import Tcscab from './Tcscab.jsx';
 import Mission from './Mission.jsx';
 import Contact from './Contact.jsx';
+import Aluminai from './Alumini.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "contact",
     element: <Contact />,
+  },
+  {
+    path: "aluminai",
+    element: <Aluminai />,
   }
 ]);
 

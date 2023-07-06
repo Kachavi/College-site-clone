@@ -1,5 +1,5 @@
 import Header from "./Header"
-
+import Footer from "./Footer"
 
 function Contact() {
     return (
@@ -93,6 +93,7 @@ function Contact() {
 
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

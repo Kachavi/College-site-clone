@@ -26,3 +26,43 @@
   color: white;
   background-color: #01367a;
 }
+
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+    footer {
+      background-color: #ffffff;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+    }
+
+.dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.github-img {
+  width: 24px;
+  height: 24px;
+  display: inline;
+}

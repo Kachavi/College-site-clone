@@ -13,7 +13,7 @@ function Header() {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
                             <li class="nav-item">
                                 <Link to={`/`} class="nav-link">Home</Link>
                             </li>
@@ -29,7 +29,7 @@ function Header() {
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Aluminai</a>
+                                <Link class="nav-link" to={`/aluminai`}>Alumni</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to={`/contact`}>Contact</Link>

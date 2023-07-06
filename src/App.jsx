@@ -1,5 +1,6 @@
 import Header from "./Header";
 import './index.css';
+import Footer from "./Footer";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <Footer></Footer>
     </>
   )
 }
