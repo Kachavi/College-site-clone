@@ -1,12 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap'
 import { Link } from "react-router-dom";
+import './index.css'
 
 function Header() {
     return (
         <div>
             <img src="src/assets/banner.jpg" class="img-fluid mx-auto d-block" alt="Responsive image"></img>
-            <nav class="navbar navbar-expand-lg bg-new">
+            <nav class="navbar navbar-expand-lg bg-new" data-bs-theme="dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
