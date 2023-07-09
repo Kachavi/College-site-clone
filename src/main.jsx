@@ -35,7 +35,7 @@ const router = createBrowserRouter([
   {
     path: "aluminai",
     element: <Aluminai />,
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

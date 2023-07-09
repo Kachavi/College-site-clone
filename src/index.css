@@ -66,3 +66,14 @@ a {
   height: 24px;
   display: inline;
 }
+
+.custom-table {
+  border: 1px solid #dee2e6;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+}

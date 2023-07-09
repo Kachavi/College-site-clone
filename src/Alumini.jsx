@@ -1,43 +1,40 @@
 import Header from "./Header"
 import Footer from "./Footer";
 import React, { useState } from 'react';
+import Testfetch from "./Testfetch";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient("https://skbfngdbawnqnwjnvjfe.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrYmZuZ2RiYXducW53am52amZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg4NzUzMTQsImV4cCI6MjAwNDQ1MTMxNH0.1LSS-kM753CR3mm4i-hHMn2sVxQRC8wMtAbzuiJVIrI");
+
 
 function Aluminai() {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: ''
+    const [formSubmit, setFormSubmit] = useState({
+        nameper: '',
+        emailper: '',
+        passwordper: ''
     });
 
-    const { name, email, password, message } = formData;
+    const { nameper, emailper, passwordper } = formSubmit;
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormSubmit({ ...formSubmit, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
+        const { data } = await supabase
+            .from('formdata')
+            .insert([
+                { name: nameper, email: emailper, pass: passwordper },
+            ])
     };
 
     return (
         <>
             <Header />
             <div class="container">
-                {/* 
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label h4">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label h4">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form> */}
+
                 <h1>Alumni Registeration</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -45,9 +42,9 @@ function Aluminai() {
                         <input
                             type="text"
                             className="form-control"
-                            id="name"
-                            name="name"
-                            value={name}
+                            id="nameper"
+                            name="nameper"
+                            value={nameper}
                             onChange={handleChange}
                             required
                         />
@@ -57,9 +54,9 @@ function Aluminai() {
                         <input
                             type="email"
                             className="form-control"
-                            id="email"
-                            name="email"
-                            value={email}
+                            id="emailper"
+                            name="emailper"
+                            value={emailper}
                             onChange={handleChange}
                             required
                         />
@@ -69,9 +66,9 @@ function Aluminai() {
                         <input
                             type="password"
                             className="form-control"
-                            id="password"
-                            name="password"
-                            value={password}
+                            id="passwordper"
+                            name="passwordper"
+                            value={passwordper}
                             onChange={handleChange}
                             required
                         />
@@ -81,7 +78,9 @@ function Aluminai() {
 
 
             </div>
+            <Testfetch />
             <Footer></Footer>
+
         </>
     )
 }
